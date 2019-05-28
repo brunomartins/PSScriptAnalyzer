@@ -41,6 +41,6 @@ function Test-CompareWithNull
 ## Try it Yourself
 
 ``` PowerShell
-if (@() -eq $null) { 'true' } else { 'false' }  # Returns false
-if ($null -ne @()) { 'true' } else { 'false' }  # Returns true
+if (@( $Null,$Null ) -eq $Null) { 'true' } else { 'false' } # Returns true
+if ($Null -eq @( $Null, $Null )) { 'true' } else { 'false' } # Returns false
 ```
